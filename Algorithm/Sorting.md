@@ -60,28 +60,35 @@
 > 평균의 경우: O(NlogN) <br>
 > 최악의 경우: O(N<sup>2</sup>)
 
+* 이미 정렬된 경우에는 한쪽에 치우지는 정렬이 돼서 비효율적인 알고리즘이 된다.
+
+![](./img/Sort_4.png)
+
 <br>
 
 ## 4. 문제 풀이
-[프로그래머스 가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746)
+[프로그래머스 H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747)
 
 * 문제 설명
-    * 어떤 과학자가 발표한 논문 n편 중, h번 이상 인용된 논문이 h편 이상이고 나머지 논문이 h번 이하 인용되었다면 h의 최댓값이 이 과학자의 H-Index이다.  
+    * 어떤 과학자가 발표한 논문 n편 중, **h번 이상 인용된 논문이 h편 이상**이고 나머지 논문이 h번 이하 인용되었다면 **h의 최댓값**이 이 과학자의 H-Index이다.  
     * 즉, 이 과학자의 H-Index는 발표한 논문 편 수를 넘을 수 없다.  
-    * 5편의 논문을 썼는데, 다섯편 모두 5번 이상 인용되었다면 H-Index 는 5
-    * 다섯편 발표했는데, 5번 이상 인용된 논문이 4편 이라면 H-Index는 4 이다. 
-    * [3, 0, 6, 1, 5]에서 이 과학자는 총 5편의 논문을 발표했는데,  일단 5번 이상 인용된 논문은 2편,  3번이상 인용된 논문은 3 이므로 H-Index 는 3. 
+    * [3, 0, 6, 1, 5]에서 이 과학자는 총 5편의 논문을 발표했는데,  일단 5번 이상 인용된 논문은 2편,  3번이상 인용된 논문은 3 이므로 H-Index 는 3이다.
 
-
-
+* 문제 해결 아이디어
+    * 인용 횟수를 담은 배열을 정렬한다.
+    * h=1일 때, 배열의 -1번째가 1보다 크면 '**h번 이상 인용된 논문이 h편 이상**' 을 만족해서 answer = 1
+    * 이렇게 반복을 진행하면서 answer이 점점 더 큰 값으로 업데이트 되고 H-Index 중에서 max 값으로 업데이트되면서 반복문 종료.
+    
 ```python 
 def solution(citations):
-    citations.sort(reverse=True)
-    for idx, i in enumerate(citations):
-        if i <= idx:
-            return idx
-            break
-    return len(citations)
+    answer = 0
+    citations.sort()
+    for i in range(1,len(citations)+1):
+        num = citations[-i]
+        if num >= i:
+            answer = i
+            
+    return answer
 ```
 
 
