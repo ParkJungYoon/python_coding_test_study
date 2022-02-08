@@ -11,7 +11,7 @@
   * 힙 자료구조
   * [프로그래머스 6문제](./Programmers/2주차.md)
 * [3주차] : 22.02.03~22.02.09
-  * 정렬(Sorting) 알고리즘
+  * [정렬(Sorting) 알고리즘](./Algorithm/Sorting.md)
   * [프로그래머스 6문제](./Programmers/3주차.md)
 
 
