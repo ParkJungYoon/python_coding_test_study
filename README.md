@@ -22,3 +22,6 @@
 * [6주차] : 22.02.24~22.03.02
   * [DFS / BFS](./Algorithm/DFS_BFS.md)
   * [프로그래머스 6문제](./Programmers/6주차.md)
+* [7주차] : 22.03.03~22.03.09
+  * [코딩테스트 실전 대비](./Programmers/7주차-1.md)
+  * [프로그래머스 6문제](./Programmers/7주차.md)
