@@ -2,6 +2,13 @@
 
 * 파이썬 코딩테스트 공부를 기록하는 저장소입니다.
 
+## 개념
+코딩테스트 전에 다시 살펴보자.
+
+* [기억하자](./remember.md)
+* [정수론: 소수](https://github.com/ParkJungYoon/TIL-Data_Study/blob/2d930c7820714a9024011cccdf004daa204cb451/Math/number_theory.md)
+
+
 ## Coding Test Study 일정 (22.01.25 ~ 22.03.11)
 
 * [1주차] : 22.01.21~22.01.26
@@ -24,4 +31,4 @@
   * [프로그래머스 6문제](./Programmers/6주차.md)
 * [7주차] : 22.03.03~22.03.09
   * [코딩테스트 실전 대비](./Programmers/7주차-1.md)
-  * [프로그래머스 6문제](./Programmers/7주차.md)
+  * [프로그래머스 4문제](./Programmers/7주차.md)
