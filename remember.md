@@ -45,6 +45,23 @@ print(gcd(190,160))
 
 <br>
 
+### < 효율적인 소수 판별 >
+
+* 2를 제외한 모든 소수는 홀수이다.
+* $\sqrt{n}$ 미만의 자연수 중 n을 나눌 수 있는 수가 없다면, $\sqrt{n}$ 보다 큰 수는 n을 나누지 못한다. (나머지가 0이 될 수 없다.)
+
+```python
+def isPrime2(n):
+    if n == 1:
+        return False
+    for i in range(2,int(n ** (1/2))+1):
+        if n % i == 0:
+            return False
+    return True
+```
+
+<br>
+
 ### < 파이썬 문자열 합치기 >
 
 * join 함수 
@@ -171,3 +188,18 @@ result = list(np.unique(A))
 : 순서가 없다(Unordered).
 
 <br>
+
+### < 10진법 -> k진법 >
+
+```python
+answer = ''
+    while n:
+        answer += str(n % k)
+        n = n // k
+    answer = answer[::-1]
+```
+
+### < k진법 -> 10진법 >
+```python
+answer = int(n,k)
+```
