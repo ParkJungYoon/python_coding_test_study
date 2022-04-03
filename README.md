@@ -6,8 +6,14 @@
 
 코딩테스트 전에 다시 살펴보자.
 
-- [기억하자](./remember.md)
-- [정수론: 소수](https://github.com/ParkJungYoon/TIL-Data_Study/blob/2d930c7820714a9024011cccdf004daa204cb451/Math/number_theory.md)
+- [기억하자](./remember.md) + [정수론: 소수](https://github.com/ParkJungYoon/TIL-Data_Study/blob/2d930c7820714a9024011cccdf004daa204cb451/Math/number_theory.md)
+
+## Data Structure
+- 자료 구조란
+- 스택(Stack) & 큐(Queue)
+
+## Algorithm
+
 
 ## Coding Test Study 일정 (22.01.25 ~ 22.03.11)
 
@@ -32,4 +38,4 @@
 |:-----:|:---:|:---------:|:-------:|
 |22/03/11(금) ~ 22/03/16(수)|프로그래머스 Level 1|[실패율, 폰켓몬, 체육복, 모의고사, K번째수, 완주하지 못한 선수](./Programmers/문제풀이1.md)||
 |22/03/17(목) ~ 22/03/23(수)|프로그래머스 Level 1|[소수 만들기, 내적, 음양 더하기, 없는 숫자 더하기, 크레인 인형뽑기 게임, [카카오 인턴] 키패드 누르기, 숫자 문자열과 영단어, 신규 아이디 추천](./Programmers/문제풀이2.md)|신규 아이디 추천|
-|22/03/30(수) ~ 22/04/6(수)|프로그래머스 Level 1 2문제+ solved.ac DFS/BFS 알고리즘 1문제 + solved.ac 구현/시뮬 1문제 + solved.ac  백트래킹 1문제 |[로또의 최고 순위와 최저 순위](./Programmers/문제풀이3.md)||
+|22/03/30(수) ~ 22/04/04(월)|solved.ac 그리디 알고리즘 18문제 |[그리디 브론즈 전체](./Baekjoon/greedy.md)||
