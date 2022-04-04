@@ -1,6 +1,6 @@
 ## BOJ, 그리디
 
-#### 2022.04.01
+#### 2022.04.01 ~ 22.04.04
 
 #### (10162번) 전자레인지
 
@@ -149,9 +149,7 @@ print(min, end=' ')
 print(max)
 ```
 
-#### 2022.04.02
-
-#### (2930번) 가위 바위 보
+#### (2930번) 가위 바위 보 (미해결)
 
 ```python
 r = int(input())
@@ -185,4 +183,185 @@ for i in money:
         change = change % i
 
 print(count)
+```
+
+#### (14471번) 포인트 카드
+
+```python
+n, m = map(int,input().split())
+
+# 일단 비용 다 넣고
+cost = []
+
+for i in range(m):
+    a, b = map(int,input().split())
+
+    # 성공 도장 이미 n개 이상이면 비용 0
+    if a >= n:
+        cost.append(0)
+    else:
+        cost.append(b - n)
+
+cost.remove(max(cost))
+print(sum(cost))
+```
+
+#### (14487번) 욱제는 효도쟁이야!!
+
+```python
+village = int(input())
+cost = list(map(int,input().split()))
+
+cost.remove(max(cost))
+
+print(sum(cost))
+```
+
+#### (14659번) 한조서열정리하고옴ㅋㅋ
+
+```python
+n = int(input())
+height = list(map(int,input().split()))
+count = 0
+winner_count = 0
+
+for i in range(n):
+    for j in range(i+1,n):
+        if height[j] > height[i]:
+            break
+        count += 1
+
+    if count > winner_count:
+        winner_count = count
+    count = 0
+
+print(winner_count)
+```
+
+#### (21313번) 문어
+
+```python
+n = int(input())
+L = [1,2]
+
+if n % 2 == 0:
+    result = L * (n//2)
+else:
+    result = L * (n//2)
+    result.append(3)
+
+for i in result:
+    print(i,end=' ')
+```
+
+#### (2810번) 컵홀더
+
+```python
+n = int(input())
+seat = input()
+
+count_L = seat.count('LL')
+count_S = seat.count('S')
+count_holder = count_L + count_S + 1
+
+if count_holder >= n:
+    print(n)
+else:
+    print(count_holder)
+```
+
+더 간단하게 작성
+
+```python
+N = int(input())
+seats = input()
+holder = seats.count('LL')
+if holder <= 1:
+    print(N)
+else:
+    print(N - holder + 1)
+```
+
+#### (2839번) 설탕 배달
+
+```python
+n = int(input())
+
+a = n // 5
+b = 0
+n1 = n % 5
+
+for i in range(n//5):
+    if n1 % 3 != 0:
+        a -= 1
+        n1 += 5
+        b += n1 // 3
+        n1 = n1 % 3
+        if n1 == 0:
+            break
+    else:
+        b = n1 // 3
+        n1= n1 % 3
+        break
+if n1 == 0:
+    print(a+b)
+elif n1 == 3:
+    print(1)
+else:
+    print(-1)
+```
+
+- 또 다른 풀이
+
+```python
+sugar = int(input())
+
+bag = 0
+while sugar >= 0 :
+    if sugar % 5 == 0 :  # 5의 배수이면
+        bag += (sugar // 5)  # 5로 나눈 몫을 구해야 정수가 됨
+        print(bag)
+        break
+    sugar -= 3
+    bag += 1  # 5의 배수가 될 때까지 설탕-3, 봉지+1
+else :
+    print(-1)
+```
+
+#### (14655번) 욱제는 도박쟁이야!!
+
+```python
+n = int(input())
+
+round1 = list(map(int,input().split()))
+round1 = [abs(n) for n in round1]
+
+round2 = list(map(int,input().split()))
+round2 = [n if n<0 else -n for n in round2]
+
+print(sum(round1)-sum(round2))
+```
+
+#### (17224번) APC는 왜 서브태스크 대회가 되었을까?
+
+```python
+n, l, k = map(int,input().split())
+score = []
+
+for i in range(n):
+    sub1, sub2 = map(int,input().split())
+    if l >= sub2:
+        score.append(140)
+    elif l  >= sub1:
+        score.append(100)
+    else:
+        score.append(0)
+
+print(sum(sorted(score, reverse=True)[:k]))
+```
+
+#### (19564번) 반복
+
+```python
+
 ```
