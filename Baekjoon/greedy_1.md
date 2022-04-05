@@ -363,5 +363,14 @@ print(sum(sorted(score, reverse=True)[:k]))
 #### (19564번) 반복
 
 ```python
+sentence = input()
+head = ord(sentence[0])
+count = 0
 
+for i in range(1,len(sentence)):
+    if head >= ord(sentence[i]):
+        count += 1
+    head = ord(sentence[i])
+
+print(count+1)
 ```
