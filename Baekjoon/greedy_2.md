@@ -73,3 +73,43 @@ while s != 0:
 
 print(count)
 ```
+
+#### (1817번) 짐 챙기는 숌
+
+```python
+n, m = map(int,input().split())
+if n == 0:
+    print(0)
+else:
+    book = map(int,input().split())
+    box = 0
+    count = 1
+    for i in book:
+        box += i
+        if box > m:
+            count += 1
+            box = i
+    print(count)
+```
+
+#### (2828번) 사과 담기 게임
+
+```python
+n, m = map(int,input().split())
+j = int(input())
+move = 0
+now = [i for i in range(1,m+1)]
+for _ in range(j):
+    apple = int(input())
+    if apple not in now:
+        if apple < now[0]:
+            distance = apple - now[0]
+            move += abs(distance)
+            now = list(map(lambda x:x+distance,now))
+        else:
+            distance = apple - now[-1]
+            move += distance
+            now = list(map(lambda x:x+distance,now))
+
+print(move)
+```
