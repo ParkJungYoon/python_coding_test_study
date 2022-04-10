@@ -17,6 +17,9 @@
 
 ## Algorithm
 
+- [재귀호출](./Algorithm/%EC%9E%AC%EA%B7%80%ED%98%B8%EC%B6%9C.md)
+- [이진 탐색 (Binary Search)](./Algorithm/BinarySearch.md)
+
 ## Coding Test Study 일정 (22.01.25 ~ 22.03.11)
 
 - [1주차] : 22.01.21~22.01.26
