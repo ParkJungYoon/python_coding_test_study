@@ -113,3 +113,99 @@ for _ in range(j):
 
 print(move)
 ```
+
+#### (1026번) 보물
+
+```py
+n = int(input())
+a = list(map(int,input().split()))
+b = list(map(int,input().split()))
+s = 0
+
+for i in range(n):
+    min_num = min(a)
+    max_num = max(b)
+    s += (min_num * max_num)
+    a.remove(min_num)
+    b.remove(max_num)
+
+print(s)
+```
+
+#### (1049번) 기타줄
+
+```py
+n, m = map(int,input().split())
+p_list = []
+pp_list = []
+result = []
+for i in range(m):
+    p, pp = map(int,input().split())
+    p_list.append(p)
+    pp_list.append(pp)
+
+if n%6 == 0:
+    result.append(min(p_list)*(n//6))
+    result.append(min(pp_list)*n)
+else:
+    result.append(min(p_list)*(n//6)+min(pp_list)*(n%6))
+    result.append(min(pp_list)*n)
+    result.append(min(p_list)*(n//6+1))
+
+print(min(result))
+```
+
+#### (1213번) 팰린드롬 만들기
+
+```py
+name = input()
+
+if name%2 == 0:
+```
+
+#### (1246번) 온라인 판매
+
+```py
+n, m = map(int,input().split())
+p = [int(input()) for i in range(m)]
+p.sort(reverse=True)
+list = []
+price = []
+
+for i in range(len(p)):
+    n -= 1
+    list.append((i+1)*p[i])
+    price.append(p[i])
+    if n == 0:
+        break
+
+print(price[list.index(max(list))],max(list))
+```
+
+#### (1448번) 삼각형 만들기
+
+```py
+n = int(input())
+leng = [int(input()) for _ in range(n)]
+leng.sort(reverse=True)
+c = leng[0]
+
+for i in range(1,len(leng)):
+    a = leng[i]
+    for j in range(i+1,len(leng)):
+        b = leng[j]
+        if a+b > c:
+            result = a+b+c
+            break
+        else:
+            result = -1
+
+print(result)
+```
+
+#### (1449번) 수리공 항승
+
+```py
+n, l = map(int,input().split())
+place = list(map(int,input().split()))
+```

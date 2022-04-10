@@ -166,7 +166,6 @@ for i in range(n):
             score += 2
 
 print(score)
-print(r*n*2)
 ```
 
 #### (5585번) 거스름돈
