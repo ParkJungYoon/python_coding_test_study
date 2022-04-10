@@ -97,3 +97,10 @@ res = heapsort(arr)
 for i in range(n):
     print(res[i])
 ```
+
+---
+
+## Reference & Additional Resources
+
+- [한빛미디어] 이것이 취업을 위한 코딩 테스트다 with 파이썬 (나동빈 저)
+- **Elice Ai Track**에서 제공하는 강의자료
