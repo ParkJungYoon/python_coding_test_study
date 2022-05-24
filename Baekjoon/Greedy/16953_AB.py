@@ -10,7 +10,7 @@ while queue:
         break
     if now*2 <= b or int(str(now)+'1') <= b:
         queue.append((now*2,cnt+1))
-        queue.append((int(str(now)+'1'),cnt+1))
+        queue.append((now*10+1,cnt+1))
 else:
     print(-1)
 
