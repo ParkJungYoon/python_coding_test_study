@@ -1,3 +1,29 @@
+### <collections.Counter를 이용한 카운팅>
+
+- 예시
+
+```py
+from collections import Counter
+
+Counter('hello world') # Counter({'l': 3, 'o': 2, 'h': 1, 'e': 1, ' ': 1, 'w': 1, 'r': 1, 'd': 1})
+```
+
+- `most_common()`: 데이터의 개수가 많은 순으로 정렬된 배열을 리턴
+
+```py
+from collections import Counter
+
+Counter('hello world').most_common() # [('l', 3), ('o', 2), ('h', 1), ('e', 1), (' ', 1), ('w', 1), ('r', 1), ('d', 1)]
+```
+
+```py
+from collections import Counter
+
+Counter('hello world').most_common(1) # [('l', 3)]
+```
+
+<br>
+
 ### < 리스트 컴프리헨션 >
 
 - 리스트 안에서 for문, if문 등을 지정해서 리스트 생성 가능
