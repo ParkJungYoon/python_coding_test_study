@@ -5,11 +5,12 @@
 
 import sys
 sys.setrecursionlimit(10000)
+input = sys.stdin.readline
 
 t = int(input())
 
 def dfs(i,j):
-    for ii in range(len(dx)):
+    for ii in range(4):
         y = i + dy[ii]
         x = j + dx[ii]
         if y >= 0 and y < n and x >= 0 and x < m and graph[y][x] == 1:
