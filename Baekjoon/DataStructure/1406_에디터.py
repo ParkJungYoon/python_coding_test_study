@@ -5,10 +5,8 @@ from collections import deque
 n = input().strip()
 m = int(input())
 
-queue_left = [i for i in n]
+queue_left = deque(list(n))
 queue_right = deque([])
-
-# cursor = len(n)
 
 for i in range(m):
     command = input()
@@ -25,7 +23,7 @@ for i in range(m):
             queue_left.pop()
     elif command[0] == "P":
         queue_left.append(command[2])
-    # print(queue_left,queue_right)
+    print(queue_left,queue_right)
 
 queue_right.reverse()
 print(''.join(queue_left)+''.join(queue_right))
@@ -33,7 +31,6 @@ print(''.join(queue_left)+''.join(queue_right))
 # cursor의 위치를 문자열 길이만큼에서 시작해서 cursor를 옮기면서 값을 넣으려고 했지만 잘 안됨.
 # cursor = len(n)  -> 시간초과
 # 그래서 자료구조 사용해야겠다고 생각했고
-# 처음엔 left, right 둘 다 deque로 구현했는데 left에서 값을 선택하는게 stack을 사용하는게 적절할 것 같아서
 
 # 반례
 #INPUT
