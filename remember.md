@@ -1,3 +1,8 @@
+### < heap >
+
+- heap을 tuple로 구성했을 때 앞 숫자로 정렬하므로 정렬 기준 값은 첫번 째 원소로 하고 뒤는 원래 값 넣으면 된다. (절대값 힙 구할 때)
+- 최대 힙을 구할 때는 (-num, num) 으로 저장해도 되지만 처음부터 -num으로 저장하고 pop한 다음 - 붙여주면 최대 힙 구현 완료. -> 조금 더 빠름.
+
 ### <collections.Counter를 이용한 카운팅>
 
 - 예시
@@ -21,6 +26,8 @@ from collections import Counter
 
 Counter('hello world').most_common(1) # [('l', 3)]
 ```
+
+#### 조합: from itertools import combinations
 
 <br>
 
