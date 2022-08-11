@@ -7,7 +7,6 @@ def dfs():
         if i not in s:
             s.append(i)
             dfs()
-            print(s)
             s.pop()
 
 n, m = map(int, input().split())
