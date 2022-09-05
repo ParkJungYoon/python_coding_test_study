@@ -3,7 +3,7 @@
 pypy로는 시간초과 안남.
 '''
 
-# from itertools import combinations
+# 중복조합 : from itertools import combinationswith_replacement
 
 # def fibo(x):
 #     # 종료 조건
@@ -20,14 +20,6 @@ pypy로는 시간초과 안남.
 
 # d, k = map(int,input().split())
 
-# # for i in combinations(range(1,100001), 2):
-# #     dp = [0] * 31
-# #     if k == fibo(d, i):
-# #         print(i[0])
-# #         print(i[1])
-# #         break
-
-# # result = []
 # cur = False
 # for i in range(1,50001):
 #     for j in range(i,100001):
@@ -63,13 +55,9 @@ for i in range(3, d+1):
     dp[i] = (dp[i-1][0]+dp[i-2][0], dp[i-1][1]+dp[i-2][1])
 
 
-cur = False
 for i in range(1,50001):
     for j in range(i,100001):
         if k == (i*dp[d][0] + j*dp[d][1]):
             print(i)
             print(j)
-            cur = True
-            break
-    if cur:
-        break
+            exit()
