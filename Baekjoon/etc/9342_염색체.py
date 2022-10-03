@@ -22,6 +22,7 @@
 
 import re
 
+# [A-F]{0,1}으로 표현가능 
 t = int(input())
 p = re.compile('^[A-F]?A+F+C+[A-F]?$')
 

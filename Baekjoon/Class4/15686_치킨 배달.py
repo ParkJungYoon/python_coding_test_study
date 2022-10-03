@@ -18,8 +18,8 @@ for i in range(n):
         elif graph[i][j] == 2:
             chicken.append((i+1,j+1))
 
-print(house)
-print(chicken)
+# print(house)
+# print(chicken)
 
 def distance(a,b):
     distance = abs(a[0]-b[0]) + abs(a[1]-b[1])
