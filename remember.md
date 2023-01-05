@@ -1,3 +1,17 @@
+### < defaultdict 사용하기 >
+
+defaultdict는 없는 키에 접근하더라도 에러가 발생하지 않으며 기본값을 반환합니다. defaultdict는 collections 모듈에 들어있으며 기본값 생성 함수를 넣습니다.
+
+```py
+from collections import defaultdict    # collections 모듈에서 defaultdict를 가져옴
+y = defaultdict(int)    # int로 기본값 생성
+```
+
+```py
+z = defaultdict(lambda: 'python')
+z['a'] # 'python'
+```
+
 ### < heap >
 
 - heap을 tuple로 구성했을 때 앞 숫자로 정렬하므로 정렬 기준 값은 첫번 째 원소로 하고 뒤는 원래 값 넣으면 된다. (절대값 힙 구할 때)
