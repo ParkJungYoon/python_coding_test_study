@@ -26,9 +26,9 @@
     2. 30분동안 라이브 코테 카테고리: [해시의 폰켓몬](https://school.programmers.co.kr/learn/courses/30/lessons/1845)
 - `개인 공부`
   - [복습] Baekjoon(solved.ac) class3++ 다시 풀기
-  - (1463) 1로 만들기, ~~(1260) DFS와 BFS~~, ~~(11399) ATM~~, 
+  - ~~(1463) 1로 만들기~~, ~~(1260) DFS와 BFS~~, ~~(11399) ATM~~, 
   ~~(11047) 동전 0~~, (9095) 1,2,3 더하기, ~~(1003) 피보나치 함수~~
-  - 쓰읍.. 나 dp 좋아했는데.. 9달 만에 무슨 일이 일어난거야.. dp만 빼고 풀고 있네 ㅎ.. 편식 정윤
+  - 쓰읍.. 나 dp 좋아했는데.. 9달 만에 무슨 일이 일어난거야.. dp만 빼고 풀고 있네 ㅎ.. 편식 정윤.. 하지만 우째.. 해야지 ㅠ 해내야지 (강한 사람이 되겠어)
 - 복습 필요한 문제 기록
   - dp의 비중이 크다.. 예전에 정리해둔 [다이나믹 프로그래밍 (Dynamic Programming)
 ](https://github.com/ParkJungYoon/python_coding_test_study/blob/main/Algorithm/DynamicProgramming.md) 읽고 복습!
