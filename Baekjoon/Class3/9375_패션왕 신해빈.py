@@ -1,5 +1,3 @@
-from itertools import combinations
-
 for _ in range(int(input())):
     dict = {}
     n = int(input())
@@ -10,7 +8,6 @@ for _ in range(int(input())):
         else:
             dict[type] = [name] 
 
-    # print(dict)
     '''
     1가지 고르는 경우는 무조건 n개
     2가지 옷 종류 구하고 그 옷의 value 값 개수를 곱해주고
