@@ -1,4 +1,5 @@
 def dfs():
+    # base condition
     if len(s) == m:
         print(' '.join(map(str, s)))
         return
