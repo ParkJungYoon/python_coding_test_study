@@ -112,7 +112,7 @@
 - `개인 공부`
   - cns 코딩테스트 대비, 프로그래머스 풀이, 백트래킹
     - (Lv2)타겟 넘버
-  - (11501)주식, ~~(15649)N과 M(1)~~, ~~(15650)N과 M(2)~~
+  - (11501)주식, ~~(15649)N과 M(1)~~, ~~(15650)N과 M(2)~~, (9663)N-Queen, ~~(15651)N과 M(3)~~
 </details>
 
 ---
@@ -138,6 +138,7 @@
 - [DFS / BFS](./Algorithm/DFS_BFS.md)
 - [구간 합 (Interval Sum)](./Algorithm/%EA%B5%AC%EA%B0%84%20%ED%95%A9.md)
 - [다이나믹 프로그래밍 (DP)](./Algorithm/DynamicProgramming.md)
+- [백트래킹 (Backtracking)](./Algorithm/Backtracking.md)
 - [정렬 (Sorting) 알고리즘](./Algorithm/Sorting.md)
 - [투포인터 (TwoPointers)](./Algorithm/TwoPointers.md)
 - [이진 탐색 (Binary Search)](./Algorithm/BinarySearch.md)
