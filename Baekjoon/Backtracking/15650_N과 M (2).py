@@ -1,6 +1,21 @@
 n, m = map(int, input().split())
 arr = []
 
+def dfs(start):
+    if len(arr) == m:
+        print(*arr)
+        return
+
+    for i in range(start,n+1):
+        if i not in arr:
+            arr.append(i)
+            dfs(i+1)
+            arr.pop()
+
+dfs(1)
+
+'''
+#version 2
 def dfs():
     if len(arr) == m:
         print(*arr)
@@ -11,10 +26,11 @@ def dfs():
             arr.append(i)
             dfs()
             arr.pop()
+'''
 
-dfs()
 
 '''
+# version 1
 # 반복되는 코드
 def dfs():
     if len(arr) == m:
