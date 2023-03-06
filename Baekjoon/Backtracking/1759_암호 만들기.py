@@ -1,9 +1,7 @@
 l, c = map(int, input().split())
 str_arr = input().split()
 str_arr.sort()
-
 temp = []
-consonants = []
 
 def backtracking(start):
     if len(temp) == l and check(temp):
