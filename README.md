@@ -152,6 +152,7 @@
 
 - [자료 구조란](./DataStructure/DataStructure.md)
 - [트리(Tree)](./DataStructure/Tree.md)
+- [Red-Black 트리](https://hello-judy-world.tistory.com/199)
 - [그래프(Graph)](https://hello-judy-world.tistory.com/152)
 - [연결 리스트 (Linked list)](https://hello-judy-world.tistory.com/148)
 - [스택(Stack) & 큐(Queue)](./DataStructure/Stack%26Queue.md)
