@@ -21,10 +21,12 @@ def delivery(start):
     while temp:
         dist, now = heapq.heappop(temp)
         # 현재 노드가 이미 처리된 적이 있는 노드라면 무시
+        # 현재 꺼낸 거리 값이 기록된 값보다 크면 이미 방문한 것으로 생각
         if distance[now] < dist:
             continue
         for i in graph[now]:
             cost = dist + i[1]
+            # 현재 노드를 거쳐서 가는게 더 비용이 작다면 갱신
             if cost < distance[i[0]]:
                 distance[i[0]] = cost
                 heapq.heappush(temp, (cost, i[0]))
