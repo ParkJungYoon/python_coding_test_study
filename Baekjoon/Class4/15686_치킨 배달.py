@@ -7,7 +7,6 @@ from itertools import combinations
 input = stdin.readline
 n, m = map(int, input().split())
 # 전체 graph를 받아올 필요가 없음.
-# graph = [list(map(int,input().split())) for _ in range(n)]
 
 # 폐업시키지 않을 치킨집을 최대 M개를 골랐을 때, -> 아? 경우의 수?
 
@@ -29,7 +28,6 @@ def distance(a,b):
 
 # float("inf")
 min_distance = 100000
-# sum_distance = 0
 
 for chi in combinations(chicken, m):
     sum_distance = 0
