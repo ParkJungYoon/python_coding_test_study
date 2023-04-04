@@ -1,3 +1,5 @@
+# 방법 1 bfs : 연결되어 있는지만 확인하면 됨 
+# 시간 : 100ms
 import sys
 input = sys.stdin.readline
 from collections import deque
@@ -21,6 +23,27 @@ for i in range(n):
 for re in result:
     print(*re)
 
+'''
+# 방법 2 : 플로이드 워셜 알고리즘
+# 시간 : 228ms
+
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+graph = [list(map(int, input().split())) for _ in range(n)]
+
+for k in range(n):
+    for i in range(n):
+        for j in range(n):
+            if graph[i][k] == 1 and graph[k][j] == 1:
+                graph[i][j] = 1
+
+for g in graph:
+    print(*g)
+
+
+'''
 
 '''
 0 1 0
