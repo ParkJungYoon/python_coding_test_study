@@ -215,7 +215,7 @@
 - [정렬 (Sorting) 알고리즘](./Algorithm/Sorting.md)
 - [투포인터 (TwoPointers)](./Algorithm/TwoPointers.md)
 - [이진 탐색 (Binary Search)](./Algorithm/BinarySearch.md)
-- [최단 경로 알고리즘 (다익스트라 알고리즘)](https://hello-judy-world.tistory.com/176)
+- [최단 경로 알고리즘 (다익스트라, 플로이드 워셜)](https://hello-judy-world.tistory.com/176)
 
 ## 👼 Coding Test Study 1 일정 (22.01.25 ~ 22.03.11)
 
