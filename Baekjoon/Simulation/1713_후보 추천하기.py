@@ -1,7 +1,8 @@
-'''
-큐 사이즈 n
-(학생번호, 추천 수, 들어온 순서)
-'''
+# '''
+# 큐 사이즈 n
+# (학생번호, 추천 수, 들어온 순서)
+# 큐 자료구조 사용함
+# '''
 import sys
 from collections import deque
 input = sys.stdin.readline
@@ -12,7 +13,7 @@ recommend = list(map(int, input().split()))
 queue = deque([])
 
 flag = False
-for i in range(len(recommend)):
+for i in range(total):
     if not queue:
         queue.append((recommend[i], 1, i))
         continue
@@ -50,4 +51,30 @@ print(*result)
     
 # Answer
 1 3 4
+'''
+
+# 다른 풀이 : 딕셔너리 활용
+
+'''
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+total = int(input())
+recommend = list(map(int, input().split()))
+photo = {}
+for i in range(total):
+    if recommend[i] in photo :
+        photo[recommend[i]][0] += 1
+    else: 
+        if len(photo) < n :
+            photo[recommend[i]] = [1, i]
+        else:
+            del_list = sorted(photo.items(), key= lambda x : (x[1][0] , x[1][1]) )
+            del_key = del_list[0][0]
+            del(photo[del_key])
+            photo[recommend[i]] = [1, i]
+
+answer = list(sorted(photo.keys()))
+print(*answer)
 '''
