@@ -47,6 +47,7 @@ print(len(answer))
 
 '''
 # 비트마스킹 풀이
+# https://ip99202.github.io/posts/%EB%B0%B1%EC%A4%80-15787-%EA%B8%B0%EC%B0%A8%EA%B0%80-%EC%96%B4%EB%91%A0%EC%9D%84-%ED%97%A4%EC%B9%98%EA%B3%A0-%EC%9D%80%ED%95%98%EC%88%98%EB%A5%BC/
 
 import sys
 input = sys.stdin.readline
