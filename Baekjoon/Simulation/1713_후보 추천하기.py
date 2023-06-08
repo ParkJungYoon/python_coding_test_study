@@ -24,6 +24,7 @@ for i in range(total):
         if num == recommend[i]:
             flag = True
             queue.append((num,count+1,idx))
+            break
         else:
             queue.append((num,count,idx))
     # 같은 학생도 없었고, 큐에 자리가 있을 때
@@ -35,7 +36,6 @@ for i in range(total):
         queue.remove(out_student)
         queue.append((recommend[i], 1, i))
     flag = False
-    print(queue)
 
 result = []
 while queue:
