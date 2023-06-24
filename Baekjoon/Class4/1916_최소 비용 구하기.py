@@ -18,7 +18,8 @@ start, end = map(int, input().split())
 
 def dijkstra(start):	
     q = []  
-    heapq.heappush(q, (0,start))    
+    heapq.heappush(q, (0,start))
+    # 출발 노드 거리 0    
     distance[start] = 0    
     while q:     	
         dist, now = heapq.heappop(q)              
