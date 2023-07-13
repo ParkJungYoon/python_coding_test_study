@@ -2,6 +2,7 @@ n, m = map(int, input().split())
 nums = list(set(map(int, input().split())))
 
 nums.sort()
+# 배열은 글로벌 선언 안해도 됨, 변수는 해야함.
 nums_temp  = []
 
 def backtracking(current):
