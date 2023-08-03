@@ -15,6 +15,18 @@
 - 삼성스럽다
   - [x] [(17144) 미세먼지 안녕!](https://www.acmicpc.net/problem/17144)
 
+</details>
+
+<details>
+<summary>자주 본 듯한 유형</summary>
+
+- 그리디, 정렬
+  - [(2212) 센서](https://www.acmicpc.net/problem/2212)
+  - [(13164) 행복 유치원](https://www.acmicpc.net/problem/13164)
+- 슬라이딩 윈도우
+  - [(20437) 문자열 게임 2](https://www.acmicpc.net/problem/20437)
+  - [(1593) 문자 해독](https://www.acmicpc.net/problem/1593)
+
 
 </details>
 
