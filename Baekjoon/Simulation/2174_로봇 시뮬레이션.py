@@ -51,7 +51,7 @@ for idx, command, number in commands:
     for _ in range(number):
         excute_command()
         result = check_error()
-        # print(robot)
+        
         if result[0] == 1:
             print("Robot {} crashes into the wall".format(idx))
             exit()
