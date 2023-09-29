@@ -39,7 +39,7 @@ print(min_num)
 '''
 풀이 2 : 구현 (채정님)
 '''
-
+'''
 k = int(input())
 signList = input().split()
 
@@ -81,3 +81,4 @@ def getMinValue(k, signList):
             
 getMaxValue(k, signList)
 getMinValue(k, signList)
+'''
