@@ -1,3 +1,10 @@
+### < Math 라이브러리 >
+
+- 올림: math.ceil(3.3)
+- 내림: math.floor(3.3)
+- 반올림: round(3.3)
+- 버림: math.trunc(3.3)
+
 ### < defaultdict 사용하기 >
 
 defaultdict는 없는 키에 접근하더라도 에러가 발생하지 않으며 기본값을 반환합니다. defaultdict는 collections 모듈에 들어있으며 기본값 생성 함수를 넣습니다.
