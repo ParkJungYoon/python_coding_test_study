@@ -1,0 +1,14 @@
+-- 코드를 입력하세요
+SELECT T2.HOUR, NVL(T1.COUNT, 0) AS COUNT
+FROM (
+        SELECT TO_CHAR(DATETIME, 'HH24') AS HOUR, COUNT(*) AS COUNT 
+        FROM ANIMAL_OUTS 
+        GROUP BY TO_CHAR(DATETIME, 'HH24') 
+        ) T1, 
+        (
+        SELECT LEVEL - 1 AS HOUR 
+        FROM DUAL 
+        CONNECT BY LEVEL <= 24
+        ) T2
+WHERE T1.HOUR(+) = T2.HOUR
+ORDER BY T2.HOUR;
