@@ -1,3 +1,25 @@
+# 해시맵 활용 : 788ms
+
+from collections import defaultdict
+
+n = int(input())
+card = list(map(int, input().split()))
+card_dict = defaultdict(int)
+m = int(input())
+problem = list(map(int, input().split()))
+
+for c in card:
+    card_dict[c] = 1
+
+result = []
+for p in problem:
+    result.append(card_dict[p])
+
+print(*result)
+
+
+# 이분탐색 풀이 - 2180ms
+'''
 n = int(input())
 card = list(map(int, input().split()))
 m = int(input())
@@ -22,3 +44,4 @@ for p in problem:
     result.append(binary_search(0, n-1, p))
 
 print(*result)
+'''
