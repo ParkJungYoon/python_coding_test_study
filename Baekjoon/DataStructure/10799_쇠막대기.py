@@ -1,3 +1,26 @@
+# 복습
+
+stick = input()
+left_count = 0
+answer = 0
+
+for s in range(len(stick)):
+    if stick[s] == "(":
+        left_count += 1
+    else:
+        if stick[s-1] == "(":
+            left_count -= 1
+            answer += left_count
+        else:
+            # )) 가 나오면 하나의 스틱이 끝났다는 이야기
+            left_count -= 1
+            answer += 1
+
+print(answer)
+
+
+'''
+
 # 시간복잡도 O(N)
 
 stick = input()
@@ -18,3 +41,4 @@ for i in range(len(stick)):
             stick_count += 1
 
 print(stick_count)
+'''
