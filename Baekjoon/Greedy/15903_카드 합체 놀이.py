@@ -1,8 +1,3 @@
-'''
-a가 커서 O(N)으로 풀면 안될거 같은
-매번 값이 갱신될 때마다 sort하면 안될거 같은디,,
-'''
-
 from collections import deque
 import heapq
 
@@ -20,6 +15,7 @@ print(sum(a))
 
 
 '''
+# 덱큐 왜 시간초과 났는지 꼭 다시 생각해보기.
 a.sort()
 queue = deque(a)
 temp = deque([])
