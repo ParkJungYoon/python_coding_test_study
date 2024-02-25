@@ -21,27 +21,15 @@ for cursor in range(m):
 
     if idx == 0:
         queue.popleft()
-    elif idx < 0:
-        for i in range(abs(idx)):
+    elif idx > (len(queue)//2):
+        for i in range(len(queue)-1-idx):
             queue.appendleft(queue.pop())
-        answer += (abs(idx)+1)
+        answer += len(queue)-idx
         queue.pop()
-    elif idx > 0:
-        if idx > (len(queue)-1-idx):
-            for i in range(len(queue)-1-idx):
-                queue.appendleft(queue.pop())
-            answer += len(queue)-idx
-            queue.pop()
-        else:
-            for i in range(idx):
-                queue.append(queue.popleft())
-            answer += idx
-            queue.popleft()
-
-'''
-deque([3, 4, 5, 6, 7, 8, 9, 10, 1])
-deque([10, 1, 3, 4, 5, 6, 7, 8])
-1 + 3 + 4
-'''
+    else:
+        for i in range(idx):
+            queue.append(queue.popleft())
+        answer += idx
+        queue.popleft()
 
 print(answer)
