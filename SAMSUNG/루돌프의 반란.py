@@ -1,11 +1,22 @@
+'''
+10 50 10 1 2
+8 2
+4 4 7
+9 1 9
+10 1 2
+7 7 3
+1 5 9
+3 1 6
+2 1 8
+5 4 4
+8 7 6
+6 2 9
+
+6 33 13 41 54 5 29 13 21 15
+'''
+
 import sys
 input = sys.stdin.readline
-
-'''
-프로그램 요구사항
-- 기절 시킨 산타는 다음 턴에 다시 살아남.
-'''
-
 
 n, m, p, c, d = map(int, input().split())
 ruru = list(map(int, input().split()))
@@ -97,7 +108,7 @@ def ruru_crush(ru_dx, ru_dy):
         santa[idx][0] += (ru_dx*c)
         santa[idx][1] += (ru_dy*c)
         # 산타 기절
-        santa_faint[idx] = round + 2
+        santa_faint[idx] = round + 1
         # 1) 게임판 밖인 경우
         if not is_range(santa[idx][0],santa[idx][1]):
             is_live[idx] = False
@@ -115,7 +126,7 @@ def santa_crush(idx,san_dx,san_dy):
     santa[idx][0] += (san_dx*d*(-1))
     santa[idx][1] += (san_dy*d*(-1))
     # 산타 기절
-    santa_faint[idx] = round + 2
+    santa_faint[idx] = round + 1
     # 1) 게임판 밖인 경우
     if not is_range(santa[idx][0],santa[idx][1]):
         is_live[idx] = False
@@ -124,9 +135,9 @@ def santa_crush(idx,san_dx,san_dy):
     # 자신이 밀린 반대 방향으로 이동
     interaction(idx,santa[idx][0],santa[idx][1],-san_dx,-san_dy)
 
-
 # 상호작용
  # 상호작용 받는 루돌프도 산타가 반대로 이동한 방향으로 밀림. 위에서 - 붙여서 변수 넘겨줌
+ # x, y는 밀려난 산타의 위치 좌표
 def interaction(i,x,y,san_dx,san_dy):
     global is_live
     for idx in range(len(santa)):
@@ -140,15 +151,17 @@ def interaction(i,x,y,san_dx,san_dy):
             if not is_range(nx,ny):
                 is_live[idx] = False
                 continue
-            # 2) 다른 산타가 있는 경우 - 상호작용
             santa[idx][0], santa[idx][1] = nx, ny
+            # 2) 다른 산타가 있는 경우 - 상호작용
             interaction(idx,nx,ny,san_dx,san_dy)
 
 # 산타 1명 이동
 # 기절하지 않았고 살아있는 산타만 움직임
 # 산타는 다른 산타가 있는 칸이나 게임판 밖으로는 움직일 수 없습니다. 다른 산타가 있는 칸에 못가는걸 빼먹음.
+# 움직일 수 있어도 루돌프와 가까워질 방법이 없으면 안움직이는걸 빼먹음.
 def move_santa_one(x,y):
-    tmp = 10 ** 9
+    # tmp에 현재 거리로 함.
+    tmp = calcu_dist(ruru[0],ruru[1],x,y)
     dx, dy = 0, 0
 
     for i in range(4):
@@ -164,15 +177,15 @@ def move_santa_one(x,y):
 # 산타 전체 이동 (충돌, 상호작용, 기절)
 def move_santa_all():
     for i in range(p):
-        if not is_live[i] or santa_faint[i] > round:
+        if not is_live[i] or santa_faint[i] >= round:
             continue
         santa[i][0], santa[i][1], san_dx, san_dy = move_santa_one(santa[i][0], santa[i][1])
-        if ruru == [santa[i][0], santa[i][1]]:
+        if ruru == santa[i]:
             # 산타 충돌
             santa_crush(i,san_dx,san_dy)
 
 
-for round in range(m):
+for round in range(1, m+1):
     # 1. 루돌프의 움직임
     target_san = ru_choice()
     ru_dx, ru_dy = move_ruru(target_san)
@@ -190,6 +203,7 @@ for round in range(m):
         break
 
 print(*score)
+
 
 '''
 # 산타와 루돌프의 위치를 좌표로만 가지고 해서 로직이 꼬였음.
