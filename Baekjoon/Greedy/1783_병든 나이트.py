@@ -11,7 +11,7 @@ count = 0
 if n == 1:
     count = 1
 elif n == 2:
-    if 3 <= m <= 7:
+    if m <= 6:
         count = (m+1) // 2
     else:
         count = 4
